@@ -15,7 +15,7 @@ router.post('/pedido',(req, res) =>{
   let desconto={}
   desconto['valor'] = getPromocao(pedido,sum)
 
-  res.send(desconto)
+  return res.send(desconto)
 })
 
 const validarPedido = (pedido) =>{
