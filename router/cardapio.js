@@ -2,10 +2,10 @@ const express = require('express')
 const router = express.Router()
 const preco = require('./../router/preco')
 
-router.get('/cardapio',(req, res) =>{
-  let lanches = [
+router.get('/cardapio', (req, res) => {
+  const lanches = [
     {
-      'nome':'X-Bacon',
+      nome: 'X-Bacon',
       'ingredientes':['bacon','hamburguer de carne','queijo'],
       'preco': 0
     },{
