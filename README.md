@@ -6,7 +6,8 @@ Esta contido nesse repositório a API back-end de uma lanchonete, a qual devolve
 
 1. [Design do código](#1-Design-do-código)
 2. [Tecnologias usadas](#2-tecnologias-usadas)
-3. [Set-up do projeto](#3-set-up-do-projeto)
+3. [API do Back-end](#3-API-do-Back-end)
+4. [Set-up do projeto](#4-set-up-do-projeto)
 
 <br/><br/>
 ## `1. Design do código e escolhas tecnicas`
@@ -28,8 +29,47 @@ Abaixo se encontra as tecnologias utilizadas neste projeto:
   4.  Lib de Asserts: Chai;
   5.  CI: Travis;
   6.  Formaçao do código: ESLint.
+  
+## `3. API do Back-end`
+Abaixo se encontra os endpoints da API e suas especificações:
 
-## `3. Set-up do projeto`
+| Rota  | Método |Content-Type| Body |
+| --- | --- | --- | --- |
+| /api/ingredientes  | GET  |reponse: JSON|-|
+| /api/cardapio  | GET  | response: JSON|-|
+| /api/pedido  | POST  |request/response: JSON|{"ingredientes":[]}|
+
+`/ingredientes`: retorna um objeto 'key:value', contendo ingrediente e o valor do mesmo:
+```
+{
+    "alface": 0.4,
+    "bacon": 2,
+    ...
+  }
+  ````
+ `/cardapio`: retorna uma lista de objetos contendo os lanches disponiveis no cardapio e o preço:
+```
+[
+    {
+      nome: "X-Bacon",
+      ingredientes: ["bacon", "hamburguer de carne", "queijo"],
+      preco: 0
+    },{...}
+  ]
+```
+`/pedido`: cria um pedido, o qual espera um objeto chamado "ingredientes" que contem uma lista dos ingredientes:
+```
+{
+"ingredientes":["queijo","ovo",...]
+} 
+```
+e retorna um objeto contendo o valor do lanche:
+```
+{
+"valor":0.0
+}
+```
+## `4. Set-up do projeto`
 Requisitos minimos para rodar esse projeto é: 
 Npm e node.js v10.16.3
 
