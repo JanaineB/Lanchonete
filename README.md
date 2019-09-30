@@ -14,12 +14,12 @@ Esta contido nesse repositório a API back-end de uma lanchonete, a qual devolve
   Para este projeto foi escolhido seguir uma arquitetura desacoplada, o que resulta em menos complexidade do codigo, facilita a manutençao e sustentaçao do projeto pelo time de desenvolvimento, outros beneficios resultantes do desacoplamento back-end/front-end, esta na maior disponibilidade da aplicaçao, pois caso uma das partes fique indisponivel, a outra segue operando, mesmo que sem os dados como no caso do front-end.
   
   Para a comunicação com o front-end o back-end oferece uma API REST que segue o conceito modular com o mini-aplicativo router do express, deixando a estrutura do projeto mais simples de compreender para o desenvolvedor. A escolha da API REST para se comunicar com o seu client é feita levando em consideraçao que este pode servir qualquer client que necessite desses dados, dando maior independencia, para ambas as partes que podem se comunicar atraves de requisições REST.
-  
-  Assim como a modulaçao da API com o expresses, a modulaçao abrange toda estrutura do projeto, separando os arquivos, assim como os testes, que podem ser contrados no diretório de testes. 
- 
-  O teste unitário é elaborado usado TDD (Test Driven Developemnt) para testar as regras de negocios da lanchonete, como as funções de calculo de preço, promoção e validação dos ingredientes, resultando em maior qualidade no desenvolvimento. A integração continua dos testes é feita atraves do serviço Trevis CI.
+   
+   Em relaçao ao padrão usada para a formatação do código, foi feito uso do plugging ESLint seguindo a configuração Standart para node.js, entretando faço notar que para objetos dicionário\JSON, embora o recomendado seja: "dic.chave", foi usado "dic['chave']", pois chaves contendo espaco entre as palavras, como em: "ingredientes['Hamburguer de carne']", resultariam em um erro durante a interpretação.
+   
+  O teste unitário é elaborado usado TDD (Test Driven Developemnt) para testar as regras de negocios da lanchonete, como as funções de calculo de preço, promoção e validação dos ingredientes, resultando em maior qualidade no desenvolvimento. A integração continua dos testes é feita atraves do serviço Trevis CI, o qual ira rodar o comando especificado no packge.json: "npm test" a cada commit feito neste repositório.
 
-  Em relaçao ao padrão usada para a formatação do código, foi feito uso do plugging ESLint seguindo a configuração Standart para node.js, entretando faço notar que para objetos dicionário\JSON, embora o recomendado seja: "dic.chave", foi usado "dic['chave']", pois chaves contendo espaco entre as palavras, como em: "ingredientes['Hamburguer de carne']", resultariam em um erro durante a interpretação.
+![unittesttravis](https://travis-ci.org/JanaineB/Lanchonete/jobs/591589292)  
 
 ## `2. Tecnologias usadas`
 Abaixo se encontra as tecnologias utilizadas neste projeto:
