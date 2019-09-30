@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const preco = require('./../router/preco')
+const preco = require(__dirname + '/../router/preco')
 
 router.get('/cardapio', (req, res) => {
   const lanches = [

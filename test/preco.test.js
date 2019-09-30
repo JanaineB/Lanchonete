@@ -1,7 +1,7 @@
 const chai = require('chai')
 const expect = chai.expect
 
-const preco = require('./../router/preco')
+const preco = require(__dirname +'/../router/preco')
 
 describe('preco', () => {
   context('valida ingredientes', () => {

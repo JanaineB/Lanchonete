@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const ingredientes = require('./../router/ingredientes')
+const ingredientes = require(__dirname + '/../router/ingredientes')
 
 router.post('/pedido', (req, res) => {
   const pedido = req.body.ingredientes

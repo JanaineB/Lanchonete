@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
 
-router.use('/', require('./ingredientes').router)
-router.use('/', require('./cardapio').router)
-router.use('/', require('./preco').router)
+router.use('/', require(__dirname + '/ingredientes').router)
+router.use('/', require(__dirname + '/cardapio').router)
+router.use('/', require(__dirname + '/preco').router)
 
 module.exports = router
