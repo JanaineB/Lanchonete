@@ -2,7 +2,6 @@
 
 Esta contido nesse repositório a API back-end de uma lanchonete, a qual devolve: Cardapio, preço dos lanches do cardapio, ingredientes e preço dos lanches personalizados para um client/front-end. 
 
-
 <br/><br/>
 
 ## Sumário 
