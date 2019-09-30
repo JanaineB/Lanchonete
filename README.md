@@ -90,7 +90,4 @@ ou, para aqueles que possuem nodemon:
 ```
 nodemon
 ```
-4. Para rodar todos os testes localmente, em "/lanchonete" digite:
-```
-npm test
-```
+4. Para vizualisar se as funções estão passando em todos os testes, basta acessar: https://travis-ci.org/JanaineB/Lanchonete
