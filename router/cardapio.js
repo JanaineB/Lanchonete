@@ -6,37 +6,35 @@ router.get('/cardapio', (req, res) => {
   const lanches = [
     {
       nome: 'X-Bacon',
-      'ingredientes':['bacon','hamburguer de carne','queijo'],
-      'preco': 0
-    },{
-      'nome':'X-Burger',
-      'ingredientes':['hamburguer de carne','queijo'],
-      'preco':0
-    },{
-      'nome':'X-Egg',
-      'ingredientes':['ovo','hamburguer de carne','queijo'],
-      'preco':0
-    },{
-      'nome':'X-Egg Bacon',
-      'ingredientes':['ovo','bacon','hamburguer de carne','queijo'],
-      'preco':0
+      ingredientes: ['bacon', 'hamburguer de carne', 'queijo'],
+      preco: 0
+    }, {
+      nome: 'X-Burger',
+      ingredientes: ['hamburguer de carne', 'queijo'],
+      preco: 0
+    }, {
+      nome: 'X-Egg',
+      ingredientes: ['ovo', 'hamburguer de carne', 'queijo'],
+      preco: 0
+    }, {
+      nome: 'X-Egg Bacon',
+      ingredientes: ['ovo', 'bacon', 'hamburguer de carne', 'queijo'],
+      preco: 0
     }
   ]
-  let cardapio = getPrecoCardapio(lanches)
+  const cardapio = getPrecoCardapio(lanches)
 
   res.send(cardapio)
 })
 
 const getPrecoCardapio = (lanches) => {
+  lanches.forEach(lanche => {
+    lanche['preco'] = preco.getPreco(lanche.ingredientes)
+  })
 
-lanches.forEach(lanche => {
-lanche['preco'] = preco.getPreco(lanche['ingredientes'])
-})
-
-return lanches
+  return lanches
 }
 
- module.exports = {
-   router:router,
-   getPrecoCardapio
- }
+module.exports = {
+  router: router
+}
