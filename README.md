@@ -17,9 +17,7 @@ Esta contido nesse repositório a API back-end de uma lanchonete, a qual devolve
    
    Em relaçao ao padrão usada para a formatação do código, foi feito uso do plugging ESLint seguindo a configuração Standart para node.js, entretando faço notar que para objetos dicionário\JSON, embora o recomendado seja: "dic.chave", foi usado "dic['chave']", pois chaves contendo espaco entre as palavras, como em: "ingredientes['Hamburguer de carne']", resultariam em um erro durante a interpretação.
    
-  O teste unitário é elaborado usado TDD (Test Driven Developemnt) para testar as regras de negocios da lanchonete, como as funções de calculo de preço, promoção e validação dos ingredientes, resultando em maior qualidade no desenvolvimento. A integração continua dos testes é feita atraves do serviço Trevis CI, o qual ira rodar o comando especificado no packge.json: "npm test" a cada commit feito neste repositório.
-
-![unittesttravis](https://travis-ci.org/JanaineB/Lanchonete/jobs/591589292)  
+  O teste unitário é elaborado durante o TDD (Test Driven Developemnt) para testar as regras de negocios da lanchonete, como as funções de calculo de preço, promoção e validação dos ingredientes, resultando em maior qualidade no desenvolvimento. A integração continua dos testes é feita atraves do serviço Trevis CI, o qual ira rodar o comando "npm test" descrito no package.json, a cada commit feito neste repositório e pode ser averificado na aba de commits com o icone ✓ na cor verde.
 
 ## `2. Tecnologias usadas`
 Abaixo se encontra as tecnologias utilizadas neste projeto:
